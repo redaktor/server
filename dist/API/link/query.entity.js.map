@@ -1,0 +1,1 @@
+{"version":3,"file":"query.entity.js","sourceRoot":"","sources":["../../../src/API/link/query.entity.ts"],"names":[],"mappings":";;;AAAA,qCAAiE;AAGjE,IAAqB,WAAW,GAAhC,MAAqB,WAAW;CAK/B,CAAA;AAHC;IADC,gCAAsB,EAAE;;uCACd;AAEX;IADC,gBAAM,CAAC,EAAC,IAAI,EAAE,MAAM,EAAE,QAAQ,EAAE,IAAI,EAAC,CAAC;;yCAC1B;AAJM,WAAW;IAD/B,gBAAM,EAAE;GACY,WAAW,CAK/B;kBALoB,WAAW"}

@@ -1,0 +1,44 @@
+import { indieAuthProvider, indieAuthProviders, indieAuthMeRes, indieAuthData } from './interfaces';
+import Promise from '@dojo/shim/Promise';
+import AuthBase from '..';
+declare type indieAuthCB = void;
+declare class IndieAuth extends AuthBase {
+    protected kid?: string;
+    private directory;
+    protected user: string;
+    protected salt?: string;
+    protected verifyTimeout: number;
+    protected verifyStore: any;
+    protected providers: indieAuthProviders;
+    protected subDir: string;
+    debug: boolean;
+    protected _protocol: string;
+    protected _version: string;
+    protected _type: string;
+    protected _url: string;
+    protected _hasClients: boolean;
+    _sessionData: {
+        date: Date;
+        urls: {};
+        locale: string;
+        me: {};
+        client_id: {};
+        redirect_uri: string;
+    };
+    _options: any;
+    constructor(kwArgs?: any, kid?: string, directory?: string, user?: string, salt?: string, verifyTimeout?: number, verifyStore?: any, providers?: indieAuthProviders, subDir?: string);
+    initIndieAuth(): void;
+    test(data: any, res: any, returnFn?: any): void;
+    render(data: any, res: any, returnFn?: any): any;
+    meData(me: indieAuthMeRes): indieAuthMeRes;
+    getCachedParameters(req: any, res: any, urls: any, cacheBust: boolean): indieAuthData;
+    getCachedRequestOptions(type: string, urls: any, cache: any): any;
+    auth(req: any, res: any, cacheBust?: boolean): Promise<indieAuthData | indieAuthCB>;
+    reqOptions(provider: indieAuthProvider, verifyUrl: string, req?: any): any;
+    verify(req: any, res: any): any;
+    getProvider(req: any, res: any): any;
+    providerAuth(req: any, res: any): any;
+    providerAccess(req: any, res: any): void;
+    access(req: any, res: any): any;
+}
+export default IndieAuth;

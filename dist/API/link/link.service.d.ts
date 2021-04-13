@@ -1,0 +1,32 @@
+import { Repository } from 'typeorm';
+import LinkEntity, { LinkRO, CreateLinkDto, CreateBlockDto, QueryLinkDto, QueryFullLinkDto } from './link.entity';
+import BlockEntity from './block.entity';
+import HostEntity from './host.entity';
+import AuthEntity from './auth.entity';
+import PathEntity from './path.entity';
+import QueryEntity from './query.entity';
+import HashEntity from "./hash.entity";
+declare type Qkey = keyof QueryFullLinkDto;
+export default class LinkService {
+    private readonly linkRepository;
+    private readonly blockRepository;
+    private readonly hostRepository;
+    private readonly authRepository;
+    private readonly pathRepository;
+    private readonly queryRepository;
+    private readonly hashRepository;
+    constructor(linkRepository: Repository<LinkEntity>, blockRepository: Repository<BlockEntity>, hostRepository: Repository<HostEntity>, authRepository: Repository<AuthEntity>, pathRepository: Repository<PathEntity>, queryRepository: Repository<QueryEntity>, hashRepository: Repository<HashEntity>);
+    protected joins: Qkey[];
+    protected props: string[];
+    create(linkOrUrlString: CreateLinkDto | string, persist?: boolean): Promise<LinkRO>;
+    setBlockStatus(blockDto: CreateBlockDto): Promise<BlockEntity[]>;
+    findOne(query?: QueryLinkDto): Promise<LinkEntity | undefined>;
+    findAll(query?: QueryLinkDto): Promise<LinkEntity[] | []>;
+    delete(id: number): Promise<any>;
+    protected findQuery(o?: QueryLinkDto): import("typeorm").SelectQueryBuilder<LinkEntity>;
+    protected input(linkOrUrlString: CreateLinkDto | string): QueryFullLinkDto;
+    protected pathTree(linkData: any, isBlocked?: any, isChildren?: boolean): Promise<any[] | LinkEntity[]>;
+    deleteEmptyRelations(from: any, keys: string | string[], condition?: any): Promise<any>;
+    test(): Promise<[] | LinkEntity[]>;
+}
+export {};

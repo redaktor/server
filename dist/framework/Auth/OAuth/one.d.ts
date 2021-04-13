@@ -1,0 +1,32 @@
+import { OAuthArgs, OAuth1Params } from './interfaces';
+import AuthBase from '..';
+declare class OAuthOneClient extends AuthBase {
+    protected authUrl: any;
+    protected accessUrl?: string;
+    protected requestUrl?: string;
+    protected callbackUrl?: string;
+    protected consumerKey?: string;
+    protected consumerSecret?: string;
+    protected _signMethod: string;
+    protected _nonceSize: number;
+    verify: any;
+    protected _protocol: string;
+    protected _version: string;
+    protected _headerPrefix: string;
+    protected requestOptions: any;
+    protected accessOptions: any;
+    protected _E: any;
+    private _privateKey;
+    get OAuthParams(): OAuth1Params;
+    constructor(authUrl: any, accessUrl?: string, requestUrl?: string, callbackUrl?: string, consumerKey?: string, consumerSecret?: string, _signMethod?: string, _nonceSize?: number, verify?: any);
+    initOAuthOne(): void;
+    protected _sortParams(o: any): any;
+    protected _normalizeParams(o: any): any;
+    protected _getSignature(kwArgs: OAuthArgs, oauthParams: any): any;
+    protected _getOAuthParams(kwArgs: any): any;
+    protected getAuthHeader(kwArgs: OAuthArgs): string;
+    success(o?: any, req?: any, res?: any, finish?: boolean): any;
+    auth(req?: any, res?: any, kwArgs?: any): Promise<any>;
+    access(req?: any, res?: any, kwArgs?: any): Promise<any>;
+}
+export default OAuthOneClient;

@@ -1,0 +1,24 @@
+{
+	"compileOnSave": true,
+  "compilerOptions": {
+		"allowJs": true,
+		"declaration": true,
+		"downlevelIteration": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+		"importHelpers": true,
+		"jsx": "react",
+		"jsxFactory": "tsx",
+    "module": "commonjs",
+    "removeComments": true,
+    "target": "es2017",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "incremental": true,
+    "skipLibCheck": true,
+		"strictPropertyInitialization": false,
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}

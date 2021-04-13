@@ -1,0 +1,13 @@
+import { indieAuthProvider, indieAuthProviders } from './interfaces';
+export declare const OS: string;
+export declare const userDir: string;
+export declare function getProviders(this: any, pw?: string, doWarn?: boolean, exclEndpoint?: boolean, inclSetup?: boolean): indieAuthProviders;
+export declare function providerLinks(my: any, providers: indieAuthProviders): (url: string) => any;
+export declare function endpointLinks(my: any, endpoints?: any[]): any[];
+export declare function validFirst(a: indieAuthProvider, b: indieAuthProvider): 0 | 1 | -1;
+export declare function getTokenChoices(subDir?: string): any;
+export declare function readToken(pw: string, fileBaseName?: string, subDir?: string): any;
+export declare function writeToken(o: any, pw: string, subDir?: string): boolean | string;
+export declare function checkPW(pw: string): any;
+export declare function doLog(logArr: any, doPadding?: boolean, inclFn?: boolean): void;
+export declare function logToken(token: any, title?: string): void;

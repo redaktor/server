@@ -1,0 +1,12 @@
+export declare function getApproximateByteSize(object: any): number;
+export declare function applyMixins(derivedCtor: any, baseCtors: any[]): void;
+export declare function functor(v: any): any;
+export declare function getDottedProperty(object: any, parts: any[], create?: boolean): any;
+export declare function getProperty(object: any, propertyName: string, create?: boolean): any;
+export declare function exists(name: string, obj: any): boolean;
+export declare function copy(o: any): any;
+export declare function arrToObjByKey(key: string): (o: any, aO: any) => any;
+export declare function eq(value: any, other: any): boolean;
+export declare function byteLength(v: any): any;
+export declare function escapeRegExp(s: string): string;
+export declare function hash(s: string): number;

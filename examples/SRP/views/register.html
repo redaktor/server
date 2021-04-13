@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/milligram.css">
+    <!-- NOTE this script is at /dist/framework/PAKE/SRP/browser.bundle.js -->
+    <script src="/browser.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h4>Secure Remote Password</h4>
+      <h1>🎟 Register Demo</h1>
+      <!-- NOTE data-action="REGISTER" if you support CSP script-src 'self' -->
+      <form data-action="REGISTER" action="/register" method="post">
+        Username <input type="text" name="identity" maxlength="64" autofocus="autofocus" /><br/>
+        Password <input type="password" name="password" /><br/>
+        <input type="hidden" name="_key" value="<%= publicKey %>" />
+        <input type="hidden" name="_csrf" value="<%= csrfToken %>" />
+        <!-- or if no CSP INSTEAD type="submit" do
+        onclick="SRP.Browser.register(this.parentElement)" -->
+        <button type="submit">Register</button>
+      </form>
+      <br>
+      <%- typeof status === 'string' ? status : '' %>
+    </div>
+  </body>
+</html>

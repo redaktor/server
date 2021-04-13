@@ -1,0 +1,156 @@
+[
+  {
+    "fileName": "src/framework/Fetch/main.ts",
+    "imports": "// TODO FIXME : allowedDomains / deniedDomains\n/* When to consider navigation succeeded, defaults to load.\nSee the Puppeteer's page.goto()'s waitUntil options for further details. */\n//waitUntil?: Puppeteer.WaitForSelectorOptions;\n/* Wait for selector. See Puppeteer's page.waitFor() for further details. */\n//waitFor?: CrawlerWait;\n/* =\nwaitFor <Object> See Puppeteer's page.waitFor() for further details.\nselectorOrFunctionOrTimeout?: string|number|function; A selector, predicate or timeout to wait for.\noptions?: Puppeteer.WaitForSelectorOptions; Optional waiting parameters.\nargs <Array<Serializable>> List of arguments to pass to the predicate function.\n*/\n// TODO CHECK what does node-fetch NOT support\nimport { Url, FetchProperties, FetchPropertiesOnly } from './index';\nimport ServerProperties from './server';\nimport has from '@dojo/framework/core/has';\nimport API from './main.r';",
+    "name": "default",
+    "documentation": "TODO FIXME DOC\nl2",
+    "comment": "/**\n* TODO FIXME DOC\n* l2\n* @param\n*/\n",
+    "text": "@API\nexport default class Fetch {\n  private _cache: any = {};\n  private _queue: any = {};\n  private _seen: any = new Map();\n  protected fetchFn: any = null;\n  protected isHeadless = false;\n\n  constructor(\n    /** comment */\n    public options: FetchProperties = {}\n  ) {\n    options.method = (!!options.method ? `${options.method}` : 'GET').toUpperCase();\n/*\n    this._options = Object.assign(this._options, options);\n    this._cache = options.cache || new SessionCache();\n    this._queue = new PriorityQueue({\n      maxConcurrency: this._options.maxConcurrency,\n      cache: this._cache,\n    });\n    this._exporter = options.exporter || null;\n    this._requestedCount = 0;\n    this._preRequest = options.preRequest || null;\n    this._onSuccess = options.onSuccess || null;\n    this._onError = options.onError || null;\n    this._customCrawl = options.customCrawl || null;\n    this._exportHeader();\n    this._queue.on('pull', (\n      _options: CrawlerConnectProperties, depth: number, previousUrl: string\n    ) => this._startRequest(_options, depth, previousUrl));\n    this._browser.on('disconnected', () => void this.emit(HeadlessCrawler.Events.Disconnected));\n*/\n  }\n\n  x(\n    /**\n     * @title S\n     * @param s\n    */\n    s: string): any;\n  x(){}\n\n  /**\n  * comment\n  */\n  async fetch(url: Url, options: FetchProperties = this.options) {\n    //, c: [string,number,number] = ['a',1,2]\n    //const V = v('fetch', {url, options});\n    console.log( 'do', options ); return;\n/*\n    if (!this.fetchFn) {\n      if (has('host-node')) {\n        this.fetchFn = await import('node-fetch')\n      } else if (has('host-browser')) {\n        delete options.server;\n        await require('whatwg-fetch');\n        this.fetchFn = window.fetch\n      } else {\n        throw new Error('This environment is not supported!');\n      }\n    }\n    this.options = options;\n\n    // TODO isRobot prefetch robots.txt\n\n    if (has('host-node')) {\n      return this.fetchFn(url, this.options)\n    } else {\n      return this.clientFetch(url, this.options)\n    }\n*/\n      // in following scenarios we ignore compression support\n\t\t\t// 1. compression support is disabled\n\t\t\t// 2. HEAD request\n\t\t\t// 3. no Content-Encoding header\n\t\t\t// 4. no content response (204)\n\t\t\t// 5. content not modified response (304)\n\t\t\t/*if (!request.compress || request.method === 'HEAD' || codings === null || res.statusCode === 204 || res.statusCode === 304) {\n\t\t\t\tresponse = new Response(body, response_options);\n\t\t\t\tresolve(response);\n\t\t\t\treturn;\n\t\t\t}*/\n    }\n\n    private clientFetch(url: string, options: FetchProperties = {}) {\n\n    }\n\n/*\n    const {\n      ignoreHTTPSErrors, headless, executablePath, slowMo, args, ignoreDefaultArgs,\n      handleSIGINT, handleSIGTERM, handleSIGHUP, dumpio, userDataDir, env, devtools,\n      ...CRAWL\n    } = options;\n    const LAUNCH: Puppeteer.LaunchOptions = {\n      ignoreHTTPSErrors, headless, executablePath, slowMo, args, ignoreDefaultArgs,\n      handleSIGINT, handleSIGTERM, handleSIGHUP, dumpio, userDataDir, env, devtools\n    }\n    const browser = await Puppeteer.launch(LAUNCH);\n    const crawler = new HeadlessCrawler(CRAWL, browser);\n    await crawler.init();\n    return crawler;\n  */\n}",
+    "type": "typeof Fetch",
+    "className": "Fetch",
+    "decorators": [
+      "API"
+    ],
+    "constructors": [
+      {
+        "name": "constructor1",
+        "documentation": "",
+        "comment": "/** new Fetch(options: FetchProperties)\n * @returns instance of Fetch\n */",
+        "parameters": [
+          {
+            "name": "0",
+            "documentation": "comment ",
+            "comment": "/** comment */\n",
+            "text": "/** comment \n * @title options\n*/\n0?: FetchProperties;\n",
+            "type": "FetchProperties",
+            "isPublic": true,
+            "isAsync": false,
+            "isStatic": false,
+            "isReadonly": false,
+            "initializer": "{}",
+            "title": "options"
+          }
+        ],
+        "returnType": "Fetch"
+      }
+    ],
+    "methods": [
+      {
+        "name": "x1",
+        "documentation": "",
+        "comment": "",
+        "text": "x(\n    /**\n     * @title S\n     * @param s\n     * @returns any\n*/\n    s: string): any;",
+        "isPublic": true,
+        "isAsync": false,
+        "isStatic": false,
+        "isReadonly": false,
+        "parameters": [
+          {
+            "name": "0",
+            "documentation": "",
+            "comment": "/**\n     * @title S\n     * @param s\n    */\n",
+            "text": "/**\n * @title S\n * @param s\n*/\n0: string;\n",
+            "type": "string",
+            "isPublic": true,
+            "isAsync": false,
+            "isStatic": false,
+            "isReadonly": false,
+            "initializer": "void 0",
+            "title": "s"
+          }
+        ],
+        "returnType": "any"
+      },
+      {
+        "name": "x2",
+        "documentation": "",
+        "comment": "",
+        "text": "x(){}",
+        "isPublic": true,
+        "isAsync": false,
+        "isStatic": false,
+        "isReadonly": false,
+        "parameters": [],
+        "returnType": "void"
+      },
+      {
+        "name": "fetch",
+        "documentation": "comment",
+        "comment": "/**\n  * comment\n  */\n",
+        "text": "async fetch(url: Url, options: FetchProperties = this.options) {\n    //, c: [string,number,number] = ['a',1,2]\n    //const V = v('fetch', {url, options});\n    console.log( 'do', options ); return;\n/*\n    if (!this.fetchFn) {\n      if (has('host-node')) {\n        this.fetchFn = await import('node-fetch')\n      } else if (has('host-browser')) {\n        delete options.server;\n        await require('whatwg-fetch');\n        this.fetchFn = window.fetch\n      } else {\n        throw new Error('This environment is not supported!');\n      }\n    }\n    this.options = options;\n\n    // TODO isRobot prefetch robots.txt\n\n    if (has('host-node')) {\n      return this.fetchFn(url, this.options)\n    } else {\n      return this.clientFetch(url, this.options)\n    }\n * @returns Promise<void>\n*/\n      // in following scenarios we ignore compression support\n\t\t\t// 1. compression support is disabled\n\t\t\t// 2. HEAD request\n\t\t\t// 3. no Content-Encoding header\n\t\t\t// 4. no content response (204)\n\t\t\t// 5. content not modified response (304)\n\t\t\t/*if (!request.compress || request.method === 'HEAD' || codings === null || res.statusCode === 204 || res.statusCode === 304) {\n\t\t\t\tresponse = new Response(body, response_options);\n\t\t\t\tresolve(response);\n\t\t\t\treturn;\n\t\t\t}*/\n    }",
+        "isPublic": true,
+        "isAsync": true,
+        "isStatic": false,
+        "isReadonly": false,
+        "parameters": [
+          {
+            "name": "0",
+            "documentation": "",
+            "comment": "",
+            "text": "/**\n * @title url\n*/\n0: Url;\n",
+            "type": "string",
+            "isPublic": true,
+            "isAsync": false,
+            "isStatic": false,
+            "isReadonly": false,
+            "initializer": "void 0",
+            "title": "url"
+          },
+          {
+            "name": "1",
+            "documentation": "",
+            "comment": "",
+            "text": "/**\n * @title options\n*/\n1?: FetchProperties;\n",
+            "type": "FetchProperties",
+            "isPublic": true,
+            "isAsync": false,
+            "isStatic": false,
+            "isReadonly": false,
+            "initializer": "this.options",
+            "title": "options"
+          }
+        ],
+        "returnType": "Promise<void>"
+      },
+      {
+        "name": "clientFetch",
+        "documentation": "",
+        "comment": "",
+        "text": "private clientFetch(url: string, options: FetchProperties = {}) {\n\n    }",
+        "isPublic": false,
+        "isAsync": false,
+        "isStatic": false,
+        "isReadonly": false,
+        "parameters": [
+          {
+            "name": "0",
+            "documentation": "",
+            "comment": "",
+            "text": "/**\n * @title url\n*/\n0: string;\n",
+            "type": "string",
+            "isPublic": true,
+            "isAsync": false,
+            "isStatic": false,
+            "isReadonly": false,
+            "initializer": "void 0",
+            "title": "url"
+          },
+          {
+            "name": "1",
+            "documentation": "",
+            "comment": "",
+            "text": "/**\n * @title options\n*/\n1?: FetchProperties;\n",
+            "type": "FetchProperties",
+            "isPublic": true,
+            "isAsync": false,
+            "isStatic": false,
+            "isReadonly": false,
+            "initializer": "{}",
+            "title": "options"
+          }
+        ],
+        "returnType": "void"
+      }
+    ]
+  }
+]

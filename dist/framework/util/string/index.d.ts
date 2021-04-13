@@ -1,0 +1,15 @@
+export declare function stripTags(s: string): string;
+export declare function addSlashes(s: string): string;
+export declare function hasUnicode(str: string): boolean;
+export declare function hasUnicodeWord(str: string): boolean;
+export declare function unicodeWords(str: string): RegExpMatchArray;
+export declare function asciiWords(str: string): RegExpMatchArray;
+export declare function stringToArray(str: string, splitter?: string): string[];
+export declare function stringSize(str: string): number;
+export declare function deburr(str: string): string;
+export declare function words(str: string, pattern?: RegExp | string, guard?: any): RegExpMatchArray;
+export declare function pad(str: string, length: number, chars?: string): any;
+export declare function padEnd(str: string, length: number, chars?: string): any;
+export declare function padStart(str: string, length: number, chars?: string): any;
+export declare function truncate(str: string, length?: number, omission?: string, separator?: any): any;
+export declare function repeat(str: string, n?: number, guard?: any): string;

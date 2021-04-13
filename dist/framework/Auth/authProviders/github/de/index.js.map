@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sourceRoot":"","sources":["../../../../../../src/framework/Auth/authProviders/github/de/index.ts"],"names":[],"mappings":";;AAAA,MAAM,QAAQ,GAAG;IACf,WAAW,EAAE,gEAAgE;QAC3E,iFAAiF;IACnF,KAAK,EAAE;QACL,YAAY,EAAE,sEAAsE;QACpF,GAAG,EAAE,wBAAwB;QAC7B,MAAM,EAAE,8BAA8B;QACtC,GAAG,EAAE,wCAAwC;KAC9C;CACF,CAAC;AACF,kBAAe,QAAQ,CAAC"}

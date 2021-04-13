@@ -1,0 +1,50 @@
+import "setimmediate";
+export declare function getDefaultRegistry(): {
+    fields: any;
+    widgets: any;
+    definitions: {};
+    formContext: {};
+};
+export declare function getSchemaType(schema: any): any;
+export declare function getWidget(schema: any, widget: any, registeredWidgets?: {}): any;
+export declare function getDefaultFormState(_schema: any, formData: any, definitions?: {}): any;
+export declare function getUiOptions(uiSchema: any): any;
+export declare function isObject(thing: any): boolean;
+export declare function mergeObjects(obj1: any, obj2: any, concatArrays?: boolean): any;
+export declare function asNumber(value: any): any;
+export declare function orderProperties(properties: any, order: any): any;
+export declare function isConstant(schema: any): any;
+export declare function toConstant(schema: any): any;
+export declare function isSelect(_schema: any, definitions?: {}): boolean;
+export declare function isMultiSelect(schema: any, definitions?: {}): boolean;
+export declare function isFilesArray(schema: any, uiSchema: any, definitions?: {}): boolean;
+export declare function isFixedItems(schema: any): any;
+export declare function allowAdditionalItems(schema: any): boolean;
+export declare function optionsList(schema: any): any;
+export declare function retrieveSchema(schema: any, definitions?: {}, formData?: {}): any;
+export declare function deepEquals(a: any, b: any, ca?: any[], cb?: any[]): any;
+export declare function shouldRender(comp: any, nextProps: any, nextState: any): boolean;
+export declare function toIdSchema(schema: any, id: any, definitions: any, formData?: {}, idPrefix?: string): any;
+export declare function parseDateString(dateString: any, includeTime?: boolean): {
+    year: number;
+    month: number;
+    day: number;
+    hour: number;
+    minute: number;
+    second: number;
+};
+export declare function toDateString({ year, month, day, hour, minute, second }: {
+    year: any;
+    month: any;
+    day: any;
+    hour?: number;
+    minute?: number;
+    second?: number;
+}, time?: boolean): string;
+export declare function pad(num: any, size: any): string;
+export declare function setState(instance: any, state: any, callback: any): void;
+export declare function dataURItoBlob(dataURI: any): {
+    blob: Blob;
+    name: any;
+};
+export declare function rangeSpec(schema: any): {};

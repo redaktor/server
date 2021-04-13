@@ -1,0 +1,1 @@
+{"version":3,"file":"RequestMaxRedirectsError.js","sourceRoot":"","sources":["../../../../../src/framework/Request/request/errors/RequestMaxRedirectsError.ts"],"names":[],"mappings":";;AAEA,MAAqB,wBAAwB;IAQ5C,YAAY,OAAgB;QAC3B,IAAI,CAAC,OAAO,GAAG,OAAO,IAAI,yCAAyC,CAAC;IACrE,CAAC;IARD,IAAI,IAAI;QACP,OAAO,0BAA0B,CAAC;IACnC,CAAC;CAOD;AAXD,2CAWC"}

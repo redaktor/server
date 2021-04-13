@@ -1,0 +1,1 @@
+{"version":3,"file":"isFlattenable.js","sourceRoot":"","sources":["../../../src/framework/lang/isFlattenable.ts"],"names":[],"mappings":";;AAAA,qCAA8B;AAC9B,SAAwB,aAAa,CAAC,CAAM;IAC1C,OAAO,KAAK,CAAC,OAAO,CAAC,CAAC,CAAC,IAAI,gBAAM,CAAC,CAAC,CAAC;QACpC,CAAC,CAAC,CAAC,MAAM,CAAC,kBAAkB,IAAI,CAAC,IAAI,CAAC,CAAC,MAAM,CAAC,kBAAkB,CAAC,CAAC,CAAA;AACpE,CAAC;AAHD,gCAGC"}

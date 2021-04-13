@@ -1,0 +1,10 @@
+export declare function _(strings: TemplateStringsArray, ...values: any[]): string[];
+export declare function log(strings: TemplateStringsArray, ...values: any[]): string;
+export declare const reset: any, message: any, success: any, warning: any, error: any, list: any, input: any, output: any, neutral: any, muted: any;
+export declare function info(...strings: string[]): void;
+export declare function syntaxLog(prefix: string, key: string, value: string, includeFn: boolean): void;
+export declare function dumpError(err: any): void;
+export declare function syntaxColor(v: string, color?: string): any;
+export declare function syntaxHighlight(value: string): string;
+export declare function pwStr(str: string, padding?: number): string;
+export declare function _log(logArr: any, doPadding?: boolean, includeFn?: boolean): void;

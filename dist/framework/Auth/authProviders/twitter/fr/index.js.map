@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sourceRoot":"","sources":["../../../../../../src/framework/Auth/authProviders/twitter/fr/index.ts"],"names":[],"mappings":";;AAAA,MAAM,QAAQ,GAAG;IACf,WAAW,EAAE,uEAAuE;QAClF,+EAA+E;IACjF,KAAK,EAAE;QACL,YAAY,EAAE,oEAAoE;YAChF,uDAAuD;YACvD,6DAA6D;QAC/D,GAAG,EAAE,wBAAwB;QAC7B,MAAM,EAAE,8BAA8B;KACvC;CACF,CAAC;AACF,kBAAe,QAAQ,CAAC"}

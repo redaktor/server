@@ -1,0 +1,13 @@
+export declare function capitalize(str: string): string;
+export declare const upperFirst: (str: string) => string;
+export declare const lowerFirst: (str: string) => string;
+export declare const upperCase: (str: string) => string;
+export declare const lowerCase: (str: string) => string;
+export declare function toLower(str: string): string;
+export declare function toUpper(str: string): string;
+export declare const readable: (s: string) => string;
+export declare const camelCase: (str: string) => string;
+export declare const pascalCase: (str: string) => string;
+export declare const kebapCase: (str: string) => string;
+export declare const snakeCase: (str: string) => string;
+export declare const startCase: (str: string) => string;
